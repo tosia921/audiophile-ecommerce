@@ -38,6 +38,14 @@ module.exports = {
 					'15px',
 					{
 						lineHeight: '25px',
+						letterSpacing: '2px',
+					},
+				],
+				navLink: [
+					'13px',
+					{
+						lineHeight: '25px',
+						letterSpacing: '2px',
 					},
 				],
 				'sub-title': [
