@@ -1,8 +1,9 @@
 import { render } from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // route components
 import App from './App';
+import './index.css';
 // import Home from './pages/Home';
 import Earphones from './pages/Earphones';
 import Headphones from './pages/Headphones';

@@ -1,10 +1,10 @@
 import React from 'react';
+import Layout from '../components/Layout/Layout';
 
 export default function Home() {
 	return (
-		<div>
-			<h1>Home</h1>
-			<h1>Welcome</h1>
-		</div>
+		<Layout className="page-padding-phone xl:page-padding-desktop">
+			<h1 className="text-h1 font-bold uppercase">Home</h1>
+		</Layout>
 	);
 }
