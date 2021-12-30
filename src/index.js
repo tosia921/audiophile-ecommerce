@@ -4,26 +4,32 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 // route components
 import App from './App';
 import './index.css';
-// import Home from './pages/Home';
 import Earphones from './pages/Earphones';
 import Headphones from './pages/Headphones';
 import Speakers from './pages/Speakers';
 import ProductDetails from './pages/ProductDetails';
+// Redux
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
+// root element
 const rootElement = document.getElementById('root');
 
+//render function
 render(
-	<BrowserRouter>
-		<Routes>
-			<Route path="/" element={<App />} />
-			<Route path="/earphones" element={<Earphones />} />
-			<Route path="/earphones/:productID" element={<ProductDetails />} />
-			<Route path="/headphones" element={<Headphones />} />
-			<Route path="/headphones/:productID" element={<ProductDetails />} />
-			<Route path="/speakers" element={<Speakers />} />
-			<Route path="/speakers/:productID" element={<ProductDetails />} />
-		</Routes>
-	</BrowserRouter>,
+	<Provider store={store}>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<App />} />
+				<Route path="/earphones" element={<Earphones />} />
+				<Route path="/earphones/:productID" element={<ProductDetails />} />
+				<Route path="/headphones" element={<Headphones />} />
+				<Route path="/headphones/:productID" element={<ProductDetails />} />
+				<Route path="/speakers" element={<Speakers />} />
+				<Route path="/speakers/:productID" element={<ProductDetails />} />
+			</Routes>
+		</BrowserRouter>
+	</Provider>,
 	rootElement
 );
 
